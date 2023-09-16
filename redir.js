@@ -14,5 +14,5 @@ setInterval(() => {
     document.getElementById('counter').innerHTML = `You will be redirected back to my home page in ${(t/100).toFixed(2)} seconds...`
 }, 10)
 setTimeout(function(){
-    window.location.replace("https://ultrio.neocities.org/");
+    window.location.replace("index.html");
 }, 5000)

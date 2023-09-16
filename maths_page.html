@@ -66,7 +66,7 @@
       </div>
     </div>
     <script>
-      document.getElementById("elevLink").href=(`elevator_interior.html?destination=${window.location.href}`)
+      document.getElementById("elevLink").href=(`elevator_interior.html?destination=${location.href.split("/").slice(-1)}`)
     </script>
   </body>
 </html>

@@ -34,9 +34,9 @@
             >Credits:</a>
             <div id="credits">
               <ul>
-                <li><a href="https://neocities.org">Neocities</a> by Kyle Drake, thank you for making the web awesome again!</li>
+                <li><a href="https://neocities.org">Neocities</a> by Kyle Drake, thank you for making the web awesome again! Former host of my website.</li>
+                <li><a href="https://pages.github.com/">Github pages</a> by Github Inc., I mean what can I say</li>
                 <li><a href="https://terminal.jcubic.pl/">jQuery Terminal</a> by <a href="https://github.com/jcubic/jquery.terminal/blob/master/README.md">so many people</a></li>
-                <li><a href="https://howlerjs.com/">howler.js</a> by <a href="https://github.com/goldfire">James Simpson</a> (Not actually used cuz neocities doesn't support sound)</li>
                 <li><a href="https://ptable.com">ptable.com</a> by <a href="https://dayah.com/">Michael Dayah</a></li>
                 <li><a href="https://pegjs.org/">PEG.js</a>, just check their site for credits idek</li>
               </ul>
@@ -47,6 +47,10 @@
           onclick="event.preventDefault(); let cl = document.getElementById('changelog'); cl.style.display = cl.style.display == 'none' ? 'block' : 'none'"
           >Changelog:</a>
           <div id="changelog">
+            <h2>2023/09/17</h2>
+            <ul>
+              <li>Migrated to Github</li>
+            </ul>
             <h2>2023/08/25</h2>
             <ul>
               <li>Added word-wrap: break-word; to main css</li>
@@ -126,11 +130,11 @@
         <a href="elevator_interior.html?destination=index.html" id="elevLink">
           <img src="Assets/Images/Elevator/elevator_closed.png" id="elevator" onmouseover="openElevator()" onmouseleave="closeElevator()">
         </a>
-        <a href="https://ultrio.neocities.org/stairs">Stairs</a>
+        <a href="stairs.html">Stairs</a>
       </div>
     </div>
     <script>
-      document.getElementById("elevLink").href=(`elevator_interior.html?destination=${window.location.href}`)
+      document.getElementById("elevLink").href=(`elevator_interior.html?destination=${location.href.split("/").slice(-1)}`)
       document.getElementById('changelog').style.display = "none"
       document.getElementById('credits').style.display = "none"
     </script>

@@ -18,7 +18,6 @@
           document.getElementById("elevator").src = "Assets/Images/Elevator/elevator_closed.png"
       }
     </script>
-    <script src="howler.js/src/howler.core.js"></script>
   </head>
   <body>
     <div id="mainContent" class="centered">
@@ -106,7 +105,7 @@
       </div>
     </div>
     <script>
-      document.getElementById("elevLink").href=(`elevator_interior.html?destination=${window.location.href}`)
+      document.getElementById("elevLink").href=(`elevator_interior.html?destination=${location.href.split("/").slice(-1)}`)
     </script>
   </body>
 </html>

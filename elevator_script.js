@@ -58,12 +58,12 @@ $(window).bind("load", function() {
     const currDest = window.location.search.substring(13)
     document.getElementById("elevLink").href = currDest
     const destRef = {
-        "https://ultrio.neocities.org/elevator_interior": "This elevator???",
-        "https://ultrio.neocities.org/art_page": "Art Page",
-        "https://ultrio.neocities.org": "Home Page",
-        "https://ultrio.neocities.org/CSPage": "Computers Page",
-        "https://ultrio.neocities.org/music_page": "Music Page",
-        "https://ultrio.neocities.org/maths_page": "Math Page",
+        "elevator_interior.html": "This elevator???",
+        "art_page.html": "Art Page",
+        "index.html": "Home Page",
+        "CSPage.html": "Computers Page",
+        "music_page.html": "Music Page",
+        "maths_page.html": "Math Page",
         "https://ultrio325.tumblr.com/": "Tumblr Page"
     }
     const destCoord = {
@@ -161,7 +161,7 @@ $(window).bind("load", function() {
                             this.echo("We're here, stay safe.")
                             currCoord = [x, y]
                             var dest = arrGetKeyByValue(destCoord, currCoord)
-                            var destLink = !(dest === undefined || dest === null) ? getKeyByValue(destRef, dest) : "https://ultrio.neocities.org/void"
+                            var destLink = !(dest === undefined || dest === null) ? getKeyByValue(destRef, dest) : "void.html"
                             console.log(dest, destLink)
                             document.getElementById("elevLink").href = destLink
                             document.getElementById("destinationDisplay").innerHTML = `Current destination: ${dest === undefined || dest === null ? "???" : dest}`
@@ -185,8 +185,10 @@ $(window).bind("load", function() {
                 this.push(function(byte) {
                     const byteRegex = /^0x([0-9a-fA-F]+)$/
                     let result = byte.match(byteRegex)
-                    if (result == null) {
+                    console.log(result)
+                    if (result == null || byte == "exit") {
                         this.echo("UNBYTY EATEN, NOT TASTY")
+                        this.pop()
                         return
                     }
                     result = result[0].toUpperCase()
@@ -200,12 +202,13 @@ $(window).bind("load", function() {
                         };
                         this.echo("ELEVATOR UNSTABLE, EXIT UNPREDICTABLE")
                         const webs = {
-                            "Nowhere": "https://ultrio.neocities.org/void"
+                            "Nowhere": "void.html"
                         }
                         let choice = randomKey(webs)
                         document.getElementById("destinationDisplay").innerHTML = `Current destination: ${choice}`
                         document.getElementById("elevLink").href = webs[choice]
                         // document.getElementById("elevator").className = "shake"
+                        this.pop()
                     } else {
                         this.echo("DOING THE BYTE COMMAND, JUST WAIT A BIT OKAY")
                         setTimeout(byteLoc[result], 1000)
@@ -234,7 +237,7 @@ $(window).bind("load", function() {
 });
 
 function panic() {
-    document.getElementById("elevLink").href = "https://ultrio.neocities.org/void"
+    document.getElementById("elevLink").href = "void.html"
     document.getElementById("destinationDisplay").innerHTML = `Current destination: Nowhere`
     $('#terminal').terminal().echo(`
     Elevator delocated. Do not worry: you are safe and have plenty of time to figure the terminal out.
