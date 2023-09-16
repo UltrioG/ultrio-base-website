@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The elevator system</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="elevator_style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/x-icon" href="Assets/Images/Icons/U.png">
+    <script src="https://cdn.jsdelivr.net/gh/jcubic/static/js/wcwidth.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/jquery.terminal@2.x.x/js/jquery.terminal.min.js"></script>
+    <script src="elevator_script.js"></script>
+  </head>
+  <body>
+    <div class="centered"><p id="destinationDisplay"></p></div>
+    <div id="elevatorDiv" class="centered">
+      <a href="not_found.html" id="elevLink">
+        <img src="Assets/Images/Elevator/elevator_closed.png" id="elevator" onmouseover="openElevator()" onmouseleave="closeElevator()">
+      </a>
+    </div>
+    <button id="panic_button" onclick="panic()">PANIC</button>
+    <div id="terminalFrame" class="centered">
+      <div id="terminal"></div>
+    </div>
+    <div id="utilities">
+      <div style="float: left; display:none; width: 50%" id="ptable">
+        <iframe src="https://ptable.com/" style="width: 100%; height: 50vh"></iframe>
+      </div>
+    </div>
+  </body>
+</html>

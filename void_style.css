@@ -1,0 +1,63 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+:root {
+    --highlight: linear-gradient(315deg, rgba(255, 213, 0, 1) 50%, rgba(255, 255, 255, 1) 80%, rgba(255, 213, 0, 1) 100%);
+}
+
+@font-face {
+    font-family: CMU;
+    src: url("Assets/Fonts/cmunrm.ttf");
+}
+
+@font-face {
+    font-family: CMU;
+    src: url("Assets/Fonts/cmunti.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: CMU;
+    src: url("Assets/Fonts/cmunbx.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: CMU;
+    src: url("Assets/Fonts/cmunbi.ttf");
+    font-style: italic;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: VCR;
+    src: url("Assets/Fonts/VCR_OSD_MONO_1.001.ttf");
+}
+
+html {
+    min-height:100%;
+}
+
+body {
+    background: black;
+    background-repeat: no-repeat;
+    text-shadow: black;
+    font-family: CMU;
+    height: 100%;
+}
+
+.center {
+    line-height: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: white;
+}
+
+audio {
+    display: none;
+}

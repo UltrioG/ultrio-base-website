@@ -1,0 +1,100 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+:root {
+    --highlight: linear-gradient(315deg, rgba(255, 213, 0, 1) 50%, rgba(255, 255, 255, 1) 80%, rgba(255, 213, 0, 1) 100%);
+}
+
+@font-face {
+    font-family: CMU;
+    src: url("Assets/Fonts/cmunrm.ttf");
+}
+
+@font-face {
+    font-family: CMU;
+    src: url("Assets/Fonts/cmunti.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: CMU;
+    src: url("Assets/Fonts/cmunbx.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: CMU;
+    src: url("Assets/Fonts/cmunbi.ttf");
+    font-style: italic;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: VCR;
+    src: url("Assets/Fonts/VCR_OSD_MONO_1.001.ttf");
+}
+
+@keyframes shake {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+}
+
+html {
+    min-height:100%;
+}
+
+body {
+    background: black;
+    background-repeat: no-repeat;
+    text-shadow: white;
+    font-family: CMU;
+    height: 100%;
+    color: white;
+}
+
+.smallComment {
+    font-size: calc(5em/6);
+    font-family: CMU;
+    font-style: italic;
+}
+
+#panic_button {
+    float: right;
+    background-color: red;
+    color: white;
+    aspect-ratio: 1;
+}
+
+.centered {
+    margin: auto;
+    width: 50%;
+}
+
+.shake {
+    margin: auto;
+    width: 50%;
+    animation: shake;
+}
+
+#elevatorDiv {
+    margin-top: 4vh;
+    max-width: 20%;
+    max-height: 20%;
+}
+
+#elevator {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#destinationDisplay {
+    text-align: center;
+}
+
+.cmd-clipboard {
+    display: none;
+}

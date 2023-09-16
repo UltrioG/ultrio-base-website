@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itty bitty electrons</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="main_style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/x-icon" href="Assets/Images/Icons/U.png">
+    <script>
+      function openElevator() {
+          document.getElementById("elevator").src = "Assets/Images/Elevator/elevator_open.png"
+      }
+      
+      function closeElevator() {
+          document.getElementById("elevator").src = "Assets/Images/Elevator/elevator_closed.png"
+      }
+    </script>
+  </head>
+  <body>
+    <div id="mainContent" class="centered">
+      <div id="topFrame" class="frame">
+        <h1>I fucking love electronics so much</h1>
+        <p class="smallComment">I can't imagine a world without them</p>
+      </div>
+      <div id="middleFrame" class="frame">
+        <!--
+          <img class="right" src="Assets/Images/Artwork/mouseArtist.png" title="I'm actually a mouse artist!" alt="I'm actually a mouse artist!" style="max-width: 30%; max-width: 30%">
+        -->
+        <p>
+          I quite like electronics, Especially focused on computers!<br>
+          I've played with some electronics before, but not very much. I really hope I get to have the chance to build a project someday. 
+          <p class="smallComment" style="display: inline;">Especially a functional pc head :P</p><br>
+          I also "know" a few programming languages! They are:
+          <ul>
+            <li>Scratch (We all start somewhere :P)</li>
+            <li>Lua (My first language)</li>
+            <li>Python (Not too hard)</li>
+            <li>Javascript (What did you expect? I had to learn for this site)</li>
+          </ul>
+          Unfortunately, I barely know any information theory/graph theory, but hey, that's why I'm studying!<br>
+          I want to become a robotics engineer one day.
+        </p>
+        <p>
+          Oh yeah also <a href="https://github.com/UltrioG">here's my github</a>
+        </p>
+      </div>
+      <div id="elevatorDiv" class="centered">
+        <a href="elevator_interior.html?destination=index.html" id="elevLink">
+          <img src="Assets/Images/Elevator/elevator_closed.png" id="elevator" onmouseover="openElevator()" onmouseleave="closeElevator()">
+        </a>
+      </div>
+    </div>
+    <script>
+      document.getElementById("elevLink").href=(`elevator_interior.html?destination=${window.location.href}`)
+    </script>
+  </body>
+</html>

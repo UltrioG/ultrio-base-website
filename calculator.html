@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="calculator_style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="peg-0.10.0.min.js"></script>
+  </head>
+  <body>
+    <!-- <audio controls autoplay loop id="voidamb" src="Assets/Audio/void.ogg"></audio> -->
+    <div id="indicators">
+      <div id="shiftInd" class="indicator">SHIFT</div>
+      <div id="alphaInd" class="indicator">ALPHA</div>
+    </div>
+    <div id="IOField">
+      <p style="font-size: 12pt;">Input equations here</p>
+      <div id="eqField">
+        
+      </div>
+    </div>
+    <p style="font-size:8pt">*The shift and alpha keys are (currently) useless since everything you need is displayed</p>
+    <div id="inputs">
+      <div>
+        <table id="control" class="buttons">
+          <tr><h2>CONTROL</h2></tr>
+          <tr>
+            <td><button>AC</button></td>
+            <td><button>↑</button></td>
+            <td><button>DEL</button></td>
+          </tr>
+          <tr>
+            <td><button>←</button></td>
+            <td><button>OK</button></td>
+            <td><button>→</button></td>
+          </tr>
+          <tr>
+            <td><button>SHF</button></td>
+            <td><button>↓</button></td>
+            <td><button>ALP</button></td>
+          </tr>
+        </table>
+      </div>
+      <div><table id="number" class="buttons">
+        <h2>NUMBERS</h2>
+        <tr>
+          <td><button>7</button></td>
+          <td><button>8</button></td>
+          <td><button>9</button></td>
+        </tr>
+        <tr>
+          <td><button>4</button></td>
+          <td><button>5</button></td>
+          <td><button>6</button></td>
+        </tr>
+        <tr>
+          <td><button>1</button></td>
+          <td><button>2</button></td>
+          <td><button>3</button></td>
+        </tr>
+        <tr>
+          <td><button>.</button></td>
+          <td><button>0</button></td>
+          <td><button>E</button></td>
+        </tr>
+      </table></div>
+      <div>
+        <div><table id="basicOp" class="buttons">
+          <h2>Basic Operations</h2>
+          <tr>
+            <td><button>x<sup>2</sup></button></td>
+            <td><button>√x</button></td>
+          </tr>
+          <tr>
+            <td><button>*</button></td>
+            <td><button>/</button></td>
+          </tr>
+          <tr>
+            <td><button>+</button></td>
+            <td><button>-</button></td>
+          </tr>
+          <tr>
+            <td><button>%</button></td>
+            <td><button>=</button></td>
+          </tr>
+        </table></div>
+      </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <script src="calculator_script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+:root {
+    --highlight: linear-gradient(315deg, rgba(255, 213, 0, 1) 50%, rgba(255, 255, 255, 1) 80%, rgba(255, 213, 0, 1) 100%);
+    --text: #000000;
+    --background: #FF8000;
+    --primary: #4fa6fc;
+    --secondary: #c7d9ea;
+    --accent: #736085;
+}
+
+@font-face {
+    font-family: CMU;
+    src: url("Assets/Fonts/cmunrm.ttf");
+}
+
+@font-face {
+    font-family: CMU;
+    src: url("Assets/Fonts/cmunti.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: CMU;
+    src: url("Assets/Fonts/cmunbx.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: CMU;
+    src: url("Assets/Fonts/cmunbi.ttf");
+    font-style: italic;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: VCR;
+    src: url("Assets/Fonts/VCR_OSD_MONO_1.001.ttf");
+}
+
+html {
+    min-height:100%;
+}
+
+body {
+    background: linear-gradient(180deg, var(--background) 0%, black 100%);
+    background-repeat: no-repeat;
+    text-shadow: black;
+    font-family: CMU;
+    height: 100%
+}
+
+.smallComment {
+    font-size: calc(5em/6);
+    font-family: CMU;
+    font-style: italic;
+}
+
+.centered {
+    margin: auto;
+    width: 50%;
+}
+
+#mainContent {
+    padding-top: 2%;
+}
+
+/* Yeah no palettes are stupid */
+
+#topFrame {
+    text-align: center;
+}
+
+.frame {
+    background-color: var(--secondary);
+    border-color: black;
+    color: var(--text);
+    outline: .5vw solid;
+    outline-offset: .25vw;
+    outline-color: var(--secondary);
+    padding: .2vh;
+    padding-left: 1vh;
+    -webkit-text-stroke: 1px #00000080;
+    margin-top: 3.5vh;
+}
+
+a:link {color: var(--primary);}
+a:hover {color: var(--accent);}
+a:visited {color: #333333;}
+a:active {color: var(--background);}
+
+#elevatorDiv {
+    margin-top: 4vh;
+    max-width: 20%;
+    max-height: 20%;
+}
+
+#elevator {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#changelog {
+    display:none;
+}

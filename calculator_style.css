@@ -1,0 +1,147 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+:root {
+    --highlight: linear-gradient(315deg, rgba(255, 213, 0, 1) 50%, rgba(255, 255, 255, 1) 80%, rgba(255, 213, 0, 1) 100%);
+}
+
+@font-face {
+    font-family: CMU;
+    src: url("Assets/Fonts/cmunrm.ttf");
+}
+
+@font-face {
+    font-family: CMU;
+    src: url("Assets/Fonts/cmunti.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: CMU;
+    src: url("Assets/Fonts/cmunbx.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: CMU;
+    src: url("Assets/Fonts/cmunbi.ttf");
+    font-style: italic;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: VCR;
+    src: url("Assets/Fonts/VCR_OSD_MONO_1.001.ttf");
+}
+
+html {
+    min-height:100%;
+}
+
+body {
+    background: black;
+    background-repeat: no-repeat;
+    text-shadow: black;
+    font-family: VCR;
+    height: 100%;
+    color: white;
+    overflow: hidden;
+}
+
+div {
+    align-items: center;
+    justify-content: center;
+    min-width: 1px;
+    min-height: 1px;
+}
+
+button {
+    background-color: orange;
+    color: black;
+    width: 100%;
+    height: 100%;
+    flex-basis: 24%;
+    aspect-ratio: 1;
+    text-align: center;
+    font-family: VCR;
+    font-size: 1.4em;
+    min-width: 16px;
+    min-height: 16px;
+    margin: 2px;
+}
+
+.center {
+    line-height: 200px;
+    height: 200px;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+
+p {
+    text-align: center;
+    color: white;
+}
+
+#indicators {
+    position: fixed;
+    margin-left: 90%;
+    margin-top: 40%;
+    min-width: 10%;
+    min-height: 1%;
+    background-color: #808080;
+    display: flex;
+    justify-content: left;
+    padding: 4px;
+}
+
+.indicator {
+    min-width: 16px;
+    aspect-ratio: 1;
+    min-height: 16px;
+    max-width: 20%;
+    max-height: 20%;
+    text-align: center;
+    display: flex;
+    font-size: 8pt;
+    margin-right: 4px;
+    background-color: #202020;
+}
+
+#eqField {
+    width: 80%;
+    min-height: 16px;
+    aspect-ratio: 256/16;
+    background-color: #202020;
+    text-align: right;
+    margin: auto;
+    font-size: 24pt;
+}
+
+#inputs {
+    display: flex;
+}
+
+table {
+    table-layout: fixed;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div:has(> table) {
+    padding: 8px;
+    margin: 8px;
+    background-color: #202020;
+    align-content: center;
+}
+
+td {
+    width: 32%;
+    height: 32%;
+    flex-basis: 24%;
+    aspect-ratio: 1;
+    min-width: 16px;
+    min-height: 16px;
+    margin: 2px;
+}

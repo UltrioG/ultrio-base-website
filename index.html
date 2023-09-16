@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultrio's cool base</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link rel="icon" type="image/x-icon" href="Assets/Images/Icons/U.png">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div id="mainContent" class="centered">
+      <div id="topFrame" class="frame">
+        <h1>Whoa! You found my little corner of the internet!</h1>
+        <p class="smallComment">I can't believe neocities is free...</p>
+      </div>
+      <div id="middleFrame" class="frame">
+        <p>
+          Unfortunately, there is almost nothing here right now, but feel free to check back later to see what I've added!
+        </p>
+        <a href="https://ultrio.carrd.co/">Here is my carrd</a>
+        <p>
+          Alternatively, have you the time, you may explore my website with the elevator system! Hope you like terminals :P
+        </p>
+        <p class="smallComment">Or take the stairs if you're on mobile</p>
+        <p>
+          <p>
+            <a
+              href="#"
+              onclick="event.preventDefault(); let cl = document.getElementById('credits'); cl.style.display = cl.style.display == 'none' ? 'block' : 'none'"
+            >Credits:</a>
+            <div id="credits">
+              <ul>
+                <li><a href="https://neocities.org">Neocities</a> by Kyle Drake, thank you for making the web awesome again!</li>
+                <li><a href="https://terminal.jcubic.pl/">jQuery Terminal</a> by <a href="https://github.com/jcubic/jquery.terminal/blob/master/README.md">so many people</a></li>
+                <li><a href="https://howlerjs.com/">howler.js</a> by <a href="https://github.com/goldfire">James Simpson</a> (Not actually used cuz neocities doesn't support sound)</li>
+                <li><a href="https://ptable.com">ptable.com</a> by <a href="https://dayah.com/">Michael Dayah</a></li>
+                <li><a href="https://pegjs.org/">PEG.js</a>, just check their site for credits idek</li>
+              </ul>
+            </div>
+          </p>
+          <a
+          href="#"
+          onclick="event.preventDefault(); let cl = document.getElementById('changelog'); cl.style.display = cl.style.display == 'none' ? 'block' : 'none'"
+          >Changelog:</a>
+          <div id="changelog">
+            <h2>2023/08/25</h2>
+            <ul>
+              <li>Added word-wrap: break-word; to main css</li>
+            </ul>
+            <h2>2023/08/21</h2>
+            <ul>
+              <li>Changed palette to something that looks better.</li>
+            </ul>
+            <h2>2023/08/06</h2>
+            <ul>
+              <li>Added bandcamp page to music page</li>
+              <li>Added additional music to the list</li>
+            </ul>
+            <h2>2023/07/02</h2>
+            <ul>
+              <li>Cross-linked tumblr page in elevator</li>
+            </ul>
+            <h2>2023/07/01</h2>
+            <ul>
+              <li>Added panic button to elevator</li>
+            </ul>
+            <h2>2023/06/18</h2>
+            <ul>
+              <li>Added flake's icon to art page</li>
+            </ul>
+            <h2>2023/06/13</h2>
+            <ul>
+              <li>Added some artist icons art page</li>
+            </ul>
+            <h2>2023/06/11</h2>
+            <ul>
+              <li>Added more artists to art page</li>
+            </ul>
+            <h2>2023/05/13</h2>
+            <ul>
+              <li>Added maths page</li>
+            </ul>
+            <h2>2023/04/28</h2>
+            <ul>
+              <li>Added stairs</li>
+            </ul>
+            <h2>2023/04/23</h2>
+            <ul>
+              <li>Moved Soundcloud link from "Music I make" to "Here's my soundcloud" in Music Page</li>
+              <li>Fixed typos</li>
+              <li>Added songs to music I like</li>
+              <li>Thanked neocities</li>
+            </ul>
+            <h2>2023/04/22</h2>
+            <ul>
+              <li>Moved ptable.com to elevator terminal and added soundcloud to music page</li>
+            </ul>
+            <h2>2023/04/20</h2>
+            <ul>
+              <li>Added ptable.com</li>
+            </ul>
+            <h2>2023/04/15</h2>
+            <ul>
+              <li>Added music page</li>
+              <li>Added credits for various libraries</li>
+              <li>Added time display to elevator terminal</li>
+            </ul>
+            <h2>2023/04/14</h2>
+            <ul>
+              <li>Added website icon</li>
+            </ul>
+            <h2>2023/04/10</h2>
+            <ul>
+              <li>Added coordGo command to elevator terminal</li>
+              <li>Added Aymbord icon to art shoutouts</li>
+              <li>Added 20% icon to art shoutouts</li>
+            </ul>
+          </div>
+        </p>
+      </div>
+      <div id="elevatorDiv" class="centered">
+        <a href="elevator_interior.html?destination=index.html" id="elevLink">
+          <img src="Assets/Images/Elevator/elevator_closed.png" id="elevator" onmouseover="openElevator()" onmouseleave="closeElevator()">
+        </a>
+        <a href="https://ultrio.neocities.org/stairs">Stairs</a>
+      </div>
+    </div>
+    <script>
+      document.getElementById("elevLink").href=(`elevator_interior.html?destination=${window.location.href}`)
+      document.getElementById('changelog').style.display = "none"
+      document.getElementById('credits').style.display = "none"
+    </script>
+  </body>
+</html>

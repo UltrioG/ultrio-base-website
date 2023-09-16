@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal math</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="main_style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/x-icon" href="Assets/Images/Icons/U.png">
+    <script>
+      function openElevator() {
+          document.getElementById("elevator").src = "Assets/Images/Elevator/elevator_open.png"
+      }
+      
+      function closeElevator() {
+          document.getElementById("elevator").src = "Assets/Images/Elevator/elevator_closed.png"
+      }
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div id="mainContent" class="centered">
+      <div id="topFrame" class="frame">
+        <h1>Maths and stuff</h1>
+        <p class="smallComment">I can't talk to anyone about it cuz nobody's interested</p>
+      </div>
+      <div id="middleFrame" class="frame">
+        <!--
+          <img class="right" src="Assets/Images/Artwork/mouseArtist.png" title="I'm actually a mouse artist!" alt="I'm actually a mouse artist!" style="max-width: 30%; max-width: 30%">
+        -->
+        <p>
+          Yup, that's right. This is one of my niche interests.
+        </p>
+        <h2>To Learn List</h2>
+        <ul>
+          <li>Counting (Mistakeful)</li>
+          <li>Arithmetic (Professional)</li>
+          <li>Algebra (Mistakeful)</li>
+          <li>Geometry (Intermediate)</li>
+          <li>Analytical Geometry (Professional)</li>
+          <li>Trigonometry (Intermediate)</li>
+          <li>Combinatorics</li>
+          <li>Vector mathematics (Intermediate)</li>
+          <li>Set Theory (Professional)</li>
+          <li>Calculus (Barely)</li>
+          <li>Linear Algebra (Barely)</li>
+          <li>Abstract Algebra (<b>Barely</b>)</li>
+          <li>Some other stuffs...</li>
+        </ul>
+        <p>
+          I actually don't have much to say about math, I just do it and find it fun so
+          I guess I could post some math questions here
+        </p>
+        <p id="mathQ">
+          Math question of the update session:<br>
+          Given \(1&lt;m&lt;n&lt;100\), \(m, n\in \mathbb{Z}\), find \(|\{(m,n)|i^m+i^n \in \mathbb{R}\}|\).
+        </p>
+      </div>
+      <div id="elevatorDiv" class="centered">
+        <a href="elevator_interior.html?destination=index.html" id="elevLink">
+          <img src="Assets/Images/Elevator/elevator_closed.png" id="elevator" onmouseover="openElevator()" onmouseleave="closeElevator()">
+        </a>
+      </div>
+    </div>
+    <script>
+      document.getElementById("elevLink").href=(`elevator_interior.html?destination=${window.location.href}`)
+    </script>
+  </body>
+</html>
