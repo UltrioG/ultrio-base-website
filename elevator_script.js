@@ -64,7 +64,7 @@ $(window).bind("load", function() {
         "CSPage.html": "Computers Page",
         "music_page.html": "Music Page",
         "maths_page.html": "Math Page",
-        "https://ultrio325.tumblr.com/": "Tumblr Page"
+        "https://ultrio325.tumblr.com": "Tumblr Page"
     }
     const destCoord = {
         "This elevator???": [612, 612],
