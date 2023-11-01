@@ -56,8 +56,26 @@
         </p>
         <p id="mathQ">
           Math question of the update session:<br>
-          Given \(1&lt;m&lt;n&lt;100\), \(m, n\in \mathbb{Z}\), find \(|\{(m,n)|i^m+i^n \in \mathbb{R}\}|\).
+          Prove that $$\left(\frac{1+i\tan x}{1-i\tan x}\right)^n=\frac{1+i\tan nx}{1-i\tan nx}$$
         </p>
+        <a
+          href="#"
+          onclick="event.preventDefault(); let cl = document.getElementById('solution'); cl.style.display = cl.style.display == 'none' ? 'block' : 'none'"
+          >Solution/Proof:</a>
+        <div id="solution">
+          Let \(z(x)=1+i\tan x\). Then
+          $$|z(x)|=\sqrt{1^2+\tan ^2 x}=\sqrt{\sec ^2 x}=\sec x$$ and
+          $$\arg z(x) = \arctan \frac{\tan x}{1}=x$$
+          hence $$z(x)=(\sec x)(e^{ix})$$
+          Notice the original eqaution becomes
+          $$\left[\frac{z(x)}{\overline{z(x)}}\right]^n=\frac{z(nx)}{\overline{z(nx)}}$$
+          which becomes
+          $$\left[\frac{z(x)}{z(-x)}\right]^n=\frac{z(nx)}{z(-nx)}$$
+          $$\left(e^{2ix}\right)^n=e^{2inx}$$
+          $$e^{2inx}=e^{2inx}$$
+          which is true by reflexivity.
+          $$\blacksquare \, Q.E.D.$$
+        </div>
       </div>
       <div id="elevatorDiv" class="centered">
         <a href="elevator_interior.html?destination=index.html" id="elevLink">
@@ -67,6 +85,7 @@
     </div>
     <script>
       document.getElementById("elevLink").href=(`elevator_interior.html?destination=${location.href.split("/").slice(-1)}`)
+      document.getElementById('solution').style.display = "none"
     </script>
   </body>
 </html>
