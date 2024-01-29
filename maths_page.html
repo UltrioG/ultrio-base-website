@@ -40,7 +40,7 @@
           <li>Arithmetic (Professional)</li>
           <li>Algebra (Mistakeful)</li>
           <li>Geometry (Intermediate)</li>
-          <li>Analytical Geometry (Professional)</li>
+          <li>Analytical Geometry (Intermediate)</li>
           <li>Trigonometry (Intermediate)</li>
           <li>Combinatorics</li>
           <li>Vector mathematics (Intermediate)</li>
@@ -56,25 +56,34 @@
         </p>
         <p id="mathQ">
           Math question of the update session:<br>
-          Prove that $$\left(\frac{1+i\tan x}{1-i\tan x}\right)^n=\frac{1+i\tan nx}{1-i\tan nx}$$
+          Given $$f(x)=\frac{x}{\sqrt{1+x^2}}, f_{1}(x)=f(x), f_{n+1}(x)=f(f_{n}(x)) (n\in \mathbb{N^{+}})$$ find a general expression for $$f_n(x)$$
         </p>
         <a
           href="#"
           onclick="event.preventDefault(); let cl = document.getElementById('solution'); cl.style.display = cl.style.display == 'none' ? 'block' : 'none'"
           >Solution/Proof:</a>
         <div id="solution">
-          Let \(z(x)=1+i\tan x\). Then
-          $$|z(x)|=\sqrt{1^2+\tan ^2 x}=\sqrt{\sec ^2 x}=\sec x$$ and
-          $$\arg z(x) = \arctan \frac{\tan x}{1}=x$$
-          hence $$z(x)=(\sec x)(e^{ix})$$
-          Notice the original eqaution becomes
-          $$\left[\frac{z(x)}{\overline{z(x)}}\right]^n=\frac{z(nx)}{\overline{z(nx)}}$$
-          which becomes
-          $$\left[\frac{z(x)}{z(-x)}\right]^n=\frac{z(nx)}{z(-nx)}$$
-          $$\left(e^{2ix}\right)^n=e^{2inx}$$
-          $$e^{2inx}=e^{2inx}$$
-          which is true by reflexivity.
-          $$\blacksquare \, Q.E.D.$$
+          $$\displaystyle  \begin{array}{{>{\displaystyle}l}}
+          f_{2}( x)\\
+          =\frac{\frac{x}{\sqrt{1+x^{2}}}}{\sqrt{1+\frac{x^{2}}{1+x^{2}}}}\\
+          =\frac{\frac{x}{\sqrt{1+x^{2}}}}{\frac{\sqrt{1+2x^{2}}}{\sqrt{1+x^{2}}}}\\
+          =\frac{x}{\sqrt{1+2x^{2}}}
+          \end{array}$$
+          $$\displaystyle  \begin{array}{{>{\displaystyle}l}}
+          f_{3}( x)\\
+          =\frac{\frac{x}{\sqrt{1+2x^{2}}}}{\sqrt{1+\frac{x^{2}}{1+2x^{2}}}}\\
+          =\frac{\frac{x}{\sqrt{1+2x^{2}}}}{\frac{\sqrt{1+3x^{2}}}{\sqrt{1+2x^{2}}}}\\
+          =\frac{x}{\sqrt{1+3x^{2}}}
+          \end{array}$$
+          Extrapolating,
+          $$\displaystyle  \begin{array}{{>{\displaystyle}l}}
+          f_{n}( x)\\
+          =\frac{\frac{x}{\sqrt{1+( n-1) x^{2}}}}{\sqrt{1+\frac{x^{2}}{1+( n-1) x^{2}}}}\\
+          =\frac{\frac{x}{\sqrt{1+( n-1) x^{2}}}}{\frac{\sqrt{1+nx^{2}}}{\sqrt{1+( n-1) x^{2}}}}\\
+          =\frac{x}{\sqrt{1+nx^{2}}}
+          \end{array}$$
+          Hence
+          $$\displaystyle f_{n}( x) =\frac{x}{\sqrt{1+nx^{2}}}$$ //
         </div>
       </div>
       <div id="elevatorDiv" class="centered">
