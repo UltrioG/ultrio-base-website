@@ -56,11 +56,11 @@
         </p>
         <p id="mathQ">
           Math question of the update session:<br>
-          Given \(z(\theta)=13e^{17i\theta}\) and \(w(\theta)=23e^{29i\theta}\),
+          Given \(z(\theta)=13e^{\frac{2}{17}i\theta}\) and \(w(\theta)=23e^{\frac{2}{29}i\theta}\),
           find \(\theta \in \mathbb{R}\) such that:
           <ol type="a">
             <li>\(z(\theta)\not \lt 0\land z(\theta)\not \gt 0\)</li>
-            <li>\(w(\theta)&le;z(\theta)&le;-w(\theta)\)</li>
+            <li>\(-w(\theta)&le;z(\theta)&le;w(\theta)\)</li>
             <li>\(z(\theta)w(\theta)\lt\gt 0 \) (where \(a \lt\gt b\) iff \(a \lt b \lor a \gt b\))</li>
           </ol>
           Note that greater than and less than are not well-defined in \(\mathbb{C}\).
@@ -68,7 +68,8 @@
         <a
           href="#"
           onclick="event.preventDefault(); let cl = document.getElementById('solution'); cl.style.display = cl.style.display == 'none' ? 'block' : 'none'"
-          >Solution/Proof:</a>
+          >My Solution/Proof:</a><br>
+          (Note this isn't always correct, any errors will hopefully be fixed when noticed)
         <div id="solution">
           <ol type="a">
             Henceforth, define \(\bar{\theta} := \frac{\theta}{\pi}\).
@@ -76,22 +77,22 @@
               $$z(\theta)\not \lt 0\land z(\theta)\not \gt 0 \iff z(\theta)=0 \lor z(\theta)\in \mathbb{C}-\mathbb{R}$$
               For \(z(\theta)=0\), since \(\left|z(\theta)\right|>0\), \(z(\theta)=0\) is impossible.<br>
               For \(z(\theta)\in \mathbb{C}-\mathbb{R}\), this is true when
-              $$17\theta \not \in \left\{ \pi k \, | \, k \in \mathbb{Z} \right\}$$
-              which is true iff
-              $$\theta \not \in \left\{ \frac{\pi k}{17} \, | \, k \in \mathbb{Z} \right\}$$
+              $$\bar\theta\not=\frac{17k}{2}\text{ where }k\in\mathbb{Z}$$
+              which is satisfied when
+              $$\theta \not \in \left\{ \frac{17\pi k}{2} \, | \, k \in \mathbb{Z} \right\}$$
               hence our solution set is
-              $$\theta \in \mathbb{R}-\left\{ \frac{\pi k}{17} \, | \, k \in \mathbb{Z} \right\}$$
+              $$\theta \in \mathbb{R}-\left\{ \frac{17\pi k}{2} \, | \, k \in \mathbb{Z} \right\}$$
             </li>
             <li><br>
               Implicitly, \(z(\theta), w(\theta) \in \mathbb{R}\).<br>
               Thus,
-              $$17\bar\theta\in\mathbb{Z} \land 29\bar\theta\in\mathbb{Z}$$
+              $$17|\bar\theta \land 29|\bar\theta$$
               ergo
-              $$493\bar\theta\in\mathbb{Z}$$
+              $$493|\bar\theta$$
               hence
-              $$\bar\theta=\frac{k}{493}\text{ where }k\in\mathbb{Z}$$
+              $$\bar\theta=493k\text{ where }k\in\mathbb{Z}$$
               therefore
-              $$\theta=\frac{k\pi}{493}\text{ where }k\in\mathbb{Z}$$
+              $$\theta=493k\pi \text{ where }k\in\mathbb{Z}$$
               Note, furthermore, that the original inequality holds for real \(z\)
               and \(w\) iff \(z(\theta)\le\left|w(\theta)\right|\), which is trivial.
             </li>
@@ -102,11 +103,11 @@
               $$
                 \begin{equation}
                 \begin{split}
-                17\theta+29\theta&=k\pi&\text{ where }k\in\mathbb{Z}\\
-                46\bar\theta&=k&\\
-                \bar\theta&=\frac{k}{46}\\
-                \frac{\theta}{\pi}&=\frac{k}{46}&\\
-                \theta&=\frac{k\pi}{46}&\text{ where }k\in\mathbb{Z}\\
+                \frac{1}{17}\theta+\frac{1}{29}\theta&=k\pi &\text{ where }k\in\mathbb{Z}\\
+                46\bar\theta&=493k&\\
+                \bar\theta&=\frac{493k}{46}\\
+                \frac{\theta}{\pi}&=\frac{493k}{46}&\\
+                \theta&=\frac{493k\pi}{46}&\text{ where }k\in\mathbb{Z}\\
                 \end{split}
                 \end{equation}
               $$
