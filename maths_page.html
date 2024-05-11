@@ -56,17 +56,62 @@
         </p>
         <p id="mathQ">
           Math question of the update session:<br>
-          Given \(A(0,3)\), \(L:y=2x-4\), \(\odot C\) has a radius of \(1\),
-          let there exist a point \(M\) on \(\odot C\) such that
-          $$|AM|=2|OM|$$
-          If \(C(a,2a-4)\), what is the range of \(a\)?
+          Given \(z(\theta)=13e^{17i\theta}\) and \(w(\theta)=23e^{29i\theta}\),
+          find \(\theta \in \mathbb{R}\) such that:
+          <ol type="a">
+            <li>\(z(\theta)\not \lt 0\land z(\theta)\not \gt 0\)</li>
+            <li>\(w(\theta)&le;z(\theta)&le;-w(\theta)\)</li>
+            <li>\(z(\theta)w(\theta)\lt\gt 0 \) (where \(a \lt\gt b\) iff \(a \lt b \lor a \gt b\))</li>
+          </ol>
+          Note that greater than and less than are not well-defined in \(\mathbb{C}\).
         </p>
         <a
           href="#"
           onclick="event.preventDefault(); let cl = document.getElementById('solution'); cl.style.display = cl.style.display == 'none' ? 'block' : 'none'"
           >Solution/Proof:</a>
         <div id="solution">
-          I don't know yet! Let me know if you have the solution.
+          <ol type="a">
+            Henceforth, define \(\bar{\theta} := \frac{\theta}{\pi}\).
+            <li><br>
+              $$z(\theta)\not \lt 0\land z(\theta)\not \gt 0 \iff z(\theta)=0 \lor z(\theta)\in \mathbb{C}-\mathbb{R}$$
+              For \(z(\theta)=0\), since \(\left|z(\theta)\right|>0\), \(z(\theta)=0\) is impossible.<br>
+              For \(z(\theta)\in \mathbb{C}-\mathbb{R}\), this is true when
+              $$17\theta \not \in \left\{ \pi k \, | \, k \in \mathbb{Z} \right\}$$
+              which is true iff
+              $$\theta \not \in \left\{ \frac{\pi k}{17} \, | \, k \in \mathbb{Z} \right\}$$
+              hence our solution set is
+              $$\theta \in \mathbb{R}-\left\{ \frac{\pi k}{17} \, | \, k \in \mathbb{Z} \right\}$$
+            </li>
+            <li><br>
+              Implicitly, \(z(\theta), w(\theta) \in \mathbb{R}\).<br>
+              Thus,
+              $$17\bar\theta\in\mathbb{Z} \land 29\bar\theta\in\mathbb{Z}$$
+              ergo
+              $$493\bar\theta\in\mathbb{Z}$$
+              hence
+              $$\bar\theta=\frac{k}{493}\text{ where }k\in\mathbb{Z}$$
+              therefore
+              $$\theta=\frac{k\pi}{493}\text{ where }k\in\mathbb{Z}$$
+              Note, furthermore, that the original inequality holds for real \(z\)
+              and \(w\) iff \(z(\theta)\le\left|w(\theta)\right|\), which is trivial.
+            </li>
+            <li><br>
+              \(z(\theta)w(\theta)\lt\gt 0 \)<br>\(\implies\)<br>
+              \(z(\theta)w(\theta)\in\mathbb{R}\).
+              Thus
+              $$
+                \begin{equation}
+                \begin{split}
+                17\theta+29\theta&=k\pi&\text{ where }k\in\mathbb{Z}\\
+                46\bar\theta&=k&\\
+                \bar\theta&=\frac{k}{46}\\
+                \frac{\theta}{\pi}&=\frac{k}{46}&\\
+                \theta&=\frac{k\pi}{46}&\text{ where }k\in\mathbb{Z}\\
+                \end{split}
+                \end{equation}
+              $$
+            </li>
+          </ol>
         </div>
       </div>
       <div id="elevatorDiv" class="centered">
