@@ -124,3 +124,24 @@ img.left {
     max-width: 100%;
     max-height: 100%;
 }
+
+a.hiddenLink {
+    text-decoration: none;
+    color: black;
+}
+a:link.hiddenLink {
+    text-decoration: none;
+    color: black;
+}
+a:visited.hiddenLink {
+    text-decoration: none;
+    color: black;
+}
+a:hover.hiddenLink {
+    text-decoration: none;
+    color: black;
+}
+a:active.hiddenLink {
+    text-decoration: none;
+    color: black;
+}
